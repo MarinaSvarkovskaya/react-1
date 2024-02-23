@@ -1,0 +1,29 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.contact__block {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.contact__img {
+    height: 80px;
+    width: 80px;
+}
+
+.contact__bar {
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.contact__text {
+    color: #000;
+    font-size: 16px;
+    line-height: 20px;
+}

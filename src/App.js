@@ -5,6 +5,12 @@ import Photo from "./component/photo";
 import Price from "./component/price";
 import RoomList from "./component/room-list";
 import Description from "./component/description";
+import Detail from "./component/detail";
+import Amenities from "./component/amenities";
+import Addition from "./component/addition";
+import Attraction from "./component/attraction";
+import Reviews from "./component/review";
+import Contact from "./component/contact";
 
 function App() {
   const data = {
@@ -174,9 +180,41 @@ function App() {
         checkin={data.availability.checkin_date}
         checkout={data.availability.checkout_date}
       />
+
       <RoomList list={data.roomTypes} />
+
       <Description title="Опис" children={data.description} />
+
+      <Detail
+        guests={data.property_details.guests}
+        bedrooms={data.property_details.bedrooms}
+        beds={data.property_details.beds}
+        baths={data.property_details.baths}
+      />
+
       <Description title="Про сусідів" children={data.neighborhood_info} />
+      <Amenities />
+
+      <Contact
+        name={data.contact_info.name}
+        image={data.contact_info.image}
+        rate={data.contact_info.response_rate}
+        time={data.contact_info.response_time}
+        info={data.contact_info.info}
+        phone={data.contact_info.phone}
+      />
+
+      <Addition
+        rules={data.additional_properties.house_rules}
+        policy={data.additional_properties.cancellation_policy}
+        transportation={data.additional_properties.local_transportation}
+        languages={data.additional_properties.host_languages}
+        offers={data.additional_properties.special_offers}
+      />
+
+      <Reviews list={data.guestReviews} />
+
+      <Attraction list={data.nearbyAttractions} />
     </Page>
   );
 }

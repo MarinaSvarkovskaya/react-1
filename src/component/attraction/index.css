@@ -1,0 +1,10 @@
+.detail {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.detail__list {
+    display: grid;
+    gap: 12px; 
+}
